@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page d'acceuil</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+       <section id="header">
+       
+            <a href="#"> <img src="./../img/logo.png" class="logo" alt=""> </a> 
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="Index.html">Page d'acceuil</a></li>
+                    <li><a href="contact.html">Contactez-nous</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="moncompte.html">Mon compte</a></li>
+                    <li><a href="seconnecter.html">se connecter</a></li>
+                    <li><a href="cart.html"><i class=" fas fa-shopping-cart "></i></a></li>
+                   
+                </ul>
+            </div>
+
+          
+       </section>
+
+
+        <section id="feature" class="section-p1">
+
+            <div class="fe-box">
+                <img src="./../img/pCloud.png" alt="">
+              
+                <h6>pCloud</h6>
+                <button class="favorite">Favoris</button>
+                
+            </div>
+
+            <div class="fe-box">
+                <img src="./../img/NordLocker.svg" alt="">
+                
+                <h6>NordLocke</h6>
+                <button class="favorite">Favoris</button>
+              
+            </div>
+
+            <div class="fe-box">
+                <img src="./../img/IDrive.png" alt="">
+                
+                <h6>IDrive</h6>
+                <button class="favorite">Favoris</button>
+                
+            </div>
+
+            <div class="fe-box">
+                <img src="./../img/SugarSync.gif" alt="">
+               
+               <h6>SugarSync</h6>
+               <button class="favorite">Favoris</button>
+              
+            </div>
+
+            <div class="fe-box">
+                <img src="./../img/Google Drive.png" alt="">
+                
+                <H6>Google Drive</H6>
+                <button class="favorite">Favoris</button>
+           
+            </div>
+  <script>
+    // Fonction pour marquer un serveur comme favori
+     function markAsFavorite(event) {
+     const button = event.target;
+    const serverName = button.previousElementSibling.textContent;
+    alert(`Serveur "${serverName}" ajouté aux favoris !`);
+    }
+              
+  // Attacher un gestionnaire d'événement à chaque bouton Favoris
+     const favoriteButtons = document.querySelectorAll('.favorite');
+    favoriteButtons.forEach(button => {
+    button.addEventListener('click', markAsFavorite);
+     });
+   </script>
+
+       
+    </body>
+
+</html>
